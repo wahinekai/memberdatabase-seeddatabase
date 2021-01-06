@@ -6,6 +6,7 @@ from os import system
 # Globals
 sln = "./src/SeedDatabase.sln"
 project = "./src/SeedDatabaseHost/SeedDatabaseHost.csproj"
+dll = "SeedDatabaseHost.dll"
 
 def parse_command_line_arguments():
     parser = OptionParser()
@@ -35,9 +36,9 @@ def dotnetTest(configuration, output):
     print("Testing project")
     system(f"dotnet test {sln} --no-build --configuration {configuration} /p:OutputPath={output}")
 
-def dotnetRun(configuration, output):
-    print("Testing project")
-    system(f"dotnet run {sln} --no-build --project {project} --configuration {configuration} /p:OutputPath={output}")
+def dotnetRun(output):
+    print("Running project")
+    system(f"dotnet {output}/{dll}")
 
 def main():
     print("Parsing command-line arguments")
@@ -56,7 +57,7 @@ def main():
         dotnetTest(options.configuration, options.output)
 
     if options.run:
-        dotnetRun(options.configuration, options.output)
+        dotnetRun(options.output)
 
 if __name__ == "__main__":
     main()
