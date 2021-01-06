@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>WahineKai.MemberDatabase.SeedDatabase</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="StyleCop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="StyleCop.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+
+    <PackageReference Include="WahineKai.Common" Version="1.*" />
+    <PackageReference Include="WahineKai.MemberDatabase.Dto" Version="1.*" />
+  </ItemGroup>
+
+</Project>
