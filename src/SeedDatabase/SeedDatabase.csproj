@@ -23,7 +23,7 @@
     </PackageReference>
 
     <PackageReference Include="WahineKai.Common" Version="1.1.*" />
-    <PackageReference Include="WahineKai.MemberDatabase.Dto" Version="2.1.*" />
+    <PackageReference Include="WahineKai.MemberDatabase.Dto" Version="3.0.*" />
   </ItemGroup>
 
 </Project>
