@@ -175,8 +175,8 @@ namespace WahineKai.MemberDatabase.SeedDatabase
 
             foreach (var user in users)
             {
-                this.logger.LogTrace($"Removing user with id {user.Id} and Email {user.Email} from the database");
-                await this.userRepository.DeleteUserAsync(user);
+                this.logger.LogTrace($"Removing user with id {user.Id} from the database");
+                await this.userRepository.DeleteUserByIdAsync(user.Id);
             }
 
             // Set database cleared to be true
