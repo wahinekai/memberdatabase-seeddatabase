@@ -109,7 +109,7 @@ namespace WahineKai.MemberDatabase.SeedDatabase
                 },
             };
 
-        private readonly IUserRepository<AdminUser> userRepository;
+        private readonly IUserRepository userRepository;
         private readonly ILogger logger;
 
         private bool databaseCleared;
@@ -133,7 +133,7 @@ namespace WahineKai.MemberDatabase.SeedDatabase
             this.logger = loggerFactory.CreateLogger<DatabaseSeeder>();
 
             // Set user repository
-            this.userRepository = new CosmosUserRepository<AdminUser>(cosmosConfiguration, loggerFactory);
+            this.userRepository = new CosmosUserRepository(cosmosConfiguration, loggerFactory);
 
             this.logger.LogDebug("Database seeder construction complete");
         }
