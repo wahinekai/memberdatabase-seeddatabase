@@ -6,6 +6,7 @@
     <UserSecretsId>520bbe04-948e-4a44-bd92-0567bfa57c79</UserSecretsId>
     <RootNamespace>WahineKai.MemberDatabase.SeedDatabase.Host</RootNamespace>
     <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
